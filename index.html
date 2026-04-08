@@ -2,55 +2,123 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Посмотри в окно</title>
-    <!-- Исправление 1: сначала шрифты, потом свои стили -->
+    <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
+    <!-- ИСПРАВЛЕНО: сначала шрифты, потом свои стили -->
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <!-- Исправление 2: добавлены семантические теги -->
+    <!-- СЕМАНТИЧЕСКИЕ ТЕГИ: header -->
     <header class="header">
-        <div class="container">
-            <!-- Исправление 3: логотип обёрнут в ссылку -->
+        <div class="header__container">
+            <!-- ЛОГОТИП В ССЫЛКЕ -->
             <a href="./index.html" class="header__logo">
-                <img src="./images/logo.svg" alt="Логотип Посмотри в окно">
+                <img src="./images/logo.svg" alt="Логотип Оно тебе надо">
             </a>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#" class="header__link">О нас</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Проекты</a></li>
-                    <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+                    <li class="header__item"><a href="#" class="header__link">главная</a></li>
+                    <li class="header__item"><a href="#" class="header__link">посмотреть лоты</a></li>
+                    <li class="header__item"><a href="#" class="header__link">об аукционе</a></li>
                 </ul>
             </nav>
+            <!-- ПРАВИЛЬНЫЕ ССЫЛКИ с tel: и mailto: -->
+            <a href="tel:+99995555555" class="header__phone">+9 999 555 5555</a>
         </div>
     </header>
 
+    <!-- СЕМАНТИЧЕСКИЙ ТЕГ: main -->
     <main class="main">
+        
+        <!-- СЕМАНТИЧЕСКИЙ ТЕГ: section (блок hero) -->
         <section class="hero">
-            <div class="container">
-                <h1 class="hero__title">Посмотри в окно</h1>
-                <p class="hero__subtitle">Увидишь мир по-новому</p>
-                <!-- Исправление 4: пример правильных ссылок -->
-                <a href="tel:+71234567890" class="hero__phone">+7 123 456-78-90</a>
-                <a href="mailto:info@example.ru" class="hero__email">info@example.ru</a>
+            <div class="hero__container">
+                <h1 class="hero__title">
+                    <span>Оно</span>
+                    <span>тебе</span>
+                    <span>надо</span>
+                </h1>
+                <div class="hero__info">
+                    <p class="hero__description">Аукцион вещей, в которые никто не верил</p>
+                    <button class="hero__button">Сделать ставку</button>
+                </div>
             </div>
         </section>
 
+        <!-- СЕМАНТИЧЕСКИЙ ТЕГ: section (блок лотов) -->
+        <section class="lots">
+            <div class="lots__container">
+                <h2 class="lots__title">Лоты</h2>
+                <ul class="lots__list">
+                    <li class="lots__item">
+                        <article class="card card_type_film">
+                            <h3 class="card__title">Фильм режиссёра, который бросил кино</h3>
+                            <p class="card__text">Не просто фильм, а история о том, как снять кино и уйти...</p>
+                        </article>
+                    </li>
+                    <li class="lots__item">
+                        <article class="card card_type_book">
+                            <h3 class="card__title">Книга, где описан один скучный день из жизни рекламного агента</h3>
+                            <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания...</p>
+                        </article>
+                    </li>
+                    <li class="lots__item">
+                        <article class="card card_type_picture">
+                            <h3 class="card__title">Картина, которую повторит даже ребёнок</h3>
+                            <p class="card__text">Ну действительно, там же одни линии и круги. И не бойтесь — это не "Чёрный квадрат"</p>
+                        </article>
+                    </li>
+                </ul>
+                <a href="#" class="lots__link">посмотреть больше</a>
+            </div>
+        </section>
+
+        <!-- СЕМАНТИЧЕСКИЙ ТЕГ: section (блок об аукционе) -->
         <section class="about">
-            <div class="container">
-                <h2>О проекте</h2>
-                <p>Здесь будет ваш контент о проекте "Посмотри в окно"</p>
+            <div class="about__container">
+                <div class="about__logo">
+                    <img src="./images/logo-white.svg" alt="Логотип Оно тебе надо белый">
+                </div>
+                <div class="about__content">
+                    <h2 class="about__title">Об аукционе</h2>
+                    <div class="about__text">
+                        <p>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. Наши лоты вообще не должны были попасть на любой аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, которые создали любители?</p>
+                        <p>Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря на критику, кажется, именно эти вещи когда-то станут вашими.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- СЕМАНТИЧЕСКИЙ ТЕГ: footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Посмотри в окно. Все права защищены.</p>
-            <!-- Исправление 4: правильные ссылки в футере -->
-            <a href="tel:+71234567890" class="footer__phone">+7 123 456-78-90</a>
-            <a href="mailto:info@example.ru" class="footer__email">info@example.ru</a>
+        <div class="footer__container">
+            <!-- ПРАВИЛЬНЫЕ ССЫЛКИ с tel: и mailto: -->
+            <address class="footer__address">
+                <a href="tel:+99995555555" class="footer__phone">+9 999 555 5555</a><br>
+                <a href="mailto:info@example.com" class="footer__email">info@example.com</a><br>
+                <p>наб. Принсенграхт 263-<br>265, Амстердам</p>
+            </address>
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">главная</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">посмотреть лоты</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">об аукционе</a></li>
+                </ul>
+            </nav>
+            <div class="footer__social">
+                <a href="#" class="social-link">
+                    <img src="./images/yt.svg" alt="YouTube">
+                </a>
+                <a href="#" class="social-link">
+                    <img src="./images/vk.svg" alt="ВКонтакте">
+                </a>
+                <a href="#" class="social-link">
+                    <img src="./images/pinterest.svg" alt="Pinterest">
+                </a>
+            </div>
         </div>
     </footer>
 </body>
