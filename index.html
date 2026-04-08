@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-  </head>
-  <body></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посмотри в окно</title>
+    <!-- Исправление 1: сначала шрифты, потом свои стили -->
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- Исправление 2: добавлены семантические теги -->
+    <header class="header">
+        <div class="container">
+            <!-- Исправление 3: логотип обёрнут в ссылку -->
+            <a href="./index.html" class="header__logo">
+                <img src="./images/logo.svg" alt="Логотип Посмотри в окно">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#" class="header__link">О нас</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Проекты</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Посмотри в окно</h1>
+                <p class="hero__subtitle">Увидишь мир по-новому</p>
+                <!-- Исправление 4: пример правильных ссылок -->
+                <a href="tel:+71234567890" class="hero__phone">+7 123 456-78-90</a>
+                <a href="mailto:info@example.ru" class="hero__email">info@example.ru</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h2>О проекте</h2>
+                <p>Здесь будет ваш контент о проекте "Посмотри в окно"</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Посмотри в окно. Все права защищены.</p>
+            <!-- Исправление 4: правильные ссылки в футере -->
+            <a href="tel:+71234567890" class="footer__phone">+7 123 456-78-90</a>
+            <a href="mailto:info@example.ru" class="footer__email">info@example.ru</a>
+        </div>
+    </footer>
+</body>
 </html>
